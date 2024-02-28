@@ -1,58 +1,25 @@
-"use client";
-import Image from "next/image";
-import { images } from "@/dataJson/DataTeam";
-import React, { Suspense, useEffect, useState } from "react";
-import Skeleton from "../LoaderSpinner/Skeleton";
+import React from "react";
+import { ThreeDots } from "react-loader-spinner";
 
-export default function Team() {
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextIndex = (currentImageIndex + 1) % images.length;
-      setCurrentImageIndex(nextIndex);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [currentImageIndex]);
-
+export default function Skeleton({ style }: { style: string }) {
   return (
-    <section
-      id="#team"
-      className=" flex flex-col justify-around items-center md:flex-row  bg-[#D9D9D9] relative p-5 gap-7 lg:gap-10"
-    >
-      {/* section right */}
-      <div className="h-fit grid-repeat justify-center items-center">
-      <Suspense fallback={<Skeleton style={"img-current"} />}>
-        <Image
-          src={images[currentImageIndex].src}
-          alt="raheek-iraq-team"
-          className="rounded-full border-4 border-yel img-current w-full h-full "
-        />
-        </Suspense>
-        {images.map((img, index) => (
-          <Suspense key={index} fallback={<Skeleton style={img.style} />}>
-            <Image
-              className={`rounded-full w-full h-full ${img.style}`}
-              src={img.src}
-              alt={`raheek-iraq-team-${index}`}
-            />
-          </Suspense>
-        ))}
+    <div className={`w-full h-full rounded-full ${style}`}>
+      <div className="flex flex-row justify-center items-center rounded-3xl w-full h-full">
+        <div
+          dir="ltr"
+          className="flex flex-col justify-center  text-gray-700 items-center rounded-full bg-gray-300 w-full h-full animate-pulse"
+        >
+          <ThreeDots
+            visible={true}
+            height="30"
+            width="30"
+            color="gray"
+            radius="9"
+            ariaLabel="three-dots-loading"
+          />
+          loading..
+        </div>
       </div>
-
-      {/* section right */}
-      <div className=" flex flex-col gap-2 lg:gap-4 items-center justify-center min-w-[300px] max-w-[450px] text-center">
-        <h4 className="font-extrabold text-xl md:text-3xl lg:text-5xl text-yel ">
-          {images[currentImageIndex].name}
-        </h4>
-        <span className="text-dark-blue text-xl md:text-2xl lg:text-4xl">
-          {images[currentImageIndex].role}
-        </span>
-        <p className=" text-black-sp lg:text-xl">
-          {images[currentImageIndex].paragraph}
-        </p>
-      </div>
-    </section>
+    </div>
   );
 }
