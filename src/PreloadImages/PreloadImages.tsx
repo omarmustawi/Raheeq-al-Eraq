@@ -1,8 +1,9 @@
-
+import LoaderSpinner from "@/Components/LoaderSpinner/LoaderSpinner";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+
 export default function PreloadImages({ images }: { images: string[] }) {
-  const [imagesLoading, setImagesLoading] = useState(false);
+  const [imagesLoading, setImagesLoading] = useState(true);
   useEffect(() => {
     const loadImage = (src: string) => {
       return new Promise((resolve, reject) => {
@@ -12,13 +13,15 @@ export default function PreloadImages({ images }: { images: string[] }) {
         img.onerror = reject;
       });
     };
+    // ===========================
 
     Promise.all(images.map((src) => loadImage(src)))
-      .then(() => setImagesLoading(true))
+      .then(() => {
+        setImagesLoading(false);
+      })
       .catch((error) => console.error("Error loading images:", error));
   }, [images]);
-  console.log(" imagesLoading" , imagesLoading);
-  
+
   return (
     <div>
       <Head>
@@ -26,6 +29,7 @@ export default function PreloadImages({ images }: { images: string[] }) {
           <link key={index} rel="preload" href={src} as="image" />
         ))}
       </Head>
+      {imagesLoading && <LoaderSpinner />}
     </div>
   );
 }
