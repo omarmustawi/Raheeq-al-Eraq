@@ -5,13 +5,14 @@ import img3 from "/public/img3.webp";
 import img4 from "/public/img4.webp";
 import Image from "next/image";
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressMobileStepper from "./ProgressMobileStepper";
 import useCarouselLogic from "@/Hooks/useCarouselLogic";
 import Link from "next/link";
 import { scrollToSection } from "@/Functions/functions";
+import PreloadImages from "@/PreloadImages/PreloadImages";
 
 const HomePage = () => {
   const styleImage = [
@@ -23,7 +24,9 @@ const HomePage = () => {
     "background-position",
   ];
   const carouselItems = [img1, img2, img3, img4];
+  const images = ["/img1.webp", "/img2.webp", "/img3.webp", "/img4.webp"];
 
+  // const carouselItems = [ images.map(ele => ca )]
   const { backgroundImage, isDisplayLine, updateBackgroundImage } =
     useCarouselLogic(img1, carouselItems);
 
@@ -75,6 +78,7 @@ const HomePage = () => {
 
   return (
     <>
+      <PreloadImages images={images} />
       <div
         style={{ textShadow: "2px 2px  9px black" }}
         className="font-El-Messiri  absolute bottom-[calc(100%-300px)] lg:bottom-32  left-1/2 -translate-x-1/2 lg:left-10 xl:left-[calc((100%-1100px)/2)] xl:w-[calc(100%-700px)]  lg:translate-x-0 z-10  text-white w-[calc(90%)] sm:w-[calc(453px)] lg:w-[calc(100%-700px)] max-w-[calc(400px)] "
