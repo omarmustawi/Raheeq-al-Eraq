@@ -29,7 +29,7 @@ export default function Team() {
           className="rounded-full border-4 border-yel img-current w-full h-full "
         />
         {images.map((img, index) => (
-          <Suspense key={index} fallback={<Skeleton />}>
+          <Suspense key={index} fallback={<Skeleton style={img.style} />}>
             <Image
               className={`rounded-full w-full h-full ${img.style}`}
               src={img.src}
@@ -37,7 +37,6 @@ export default function Team() {
             />
           </Suspense>
         ))}
-      <Skeleton />
       </div>
 
       {/* section right */}
