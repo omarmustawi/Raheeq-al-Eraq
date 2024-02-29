@@ -136,7 +136,7 @@ const HomePage = () => {
               className="w-ful"
               ref={carouselRef}
             >
-              {carouselItems.map((item, index) => (
+              {images.map((item, index) => (
                 <div className={`container-img`} key={index}>
                   <Image
                     className={`${
@@ -144,7 +144,7 @@ const HomePage = () => {
                       "border-2 border-white  "
                     } rounded-md shadow-3xl w-full h-5/6 object-cover
                   `}
-                    src={item.src}
+                    src={item}
                     alt={`Raheek-AL-Iraq-${index + 1}`}
                     width={3000}
                     height={5000}

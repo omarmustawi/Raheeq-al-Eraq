@@ -11,8 +11,8 @@ import {
   socialMediaAccounts,
   iconComponents,
 } from "@/dataJson/DataFooter";
-import logo from "@/Images/logo.png";
-import ticktok from "@/Images/letterTicktok.png";
+import logo from "/public/logo.png";
+import ticktok from "/public/letterTicktok.png";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import { scrollToSection } from "@/Functions/functions";
 

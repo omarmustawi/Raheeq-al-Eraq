@@ -20,6 +20,7 @@
 
 body {
   font-family: taj;
+  font-display: swap;
 }
 @layer base {
   html {

@@ -8,13 +8,8 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
-// interface ImageInfo {
-//   img: string;
-//   style: string;
-// }
-
 interface SwiperCardProps {
-  imgs: HTMLImageElement[];
+  imgs: string[];
 }
 
 export default function SwiperCard({
@@ -30,11 +25,9 @@ export default function SwiperCard({
         className="mySwiper"
       >
         {imgs.map((item, index) => (
-          // eslint-disable-next-line react/jsx-key
           <SwiperSlide key={index}>
             <Image
-              src={item.src}
-              // className={`${item.style} `}
+              src={item}
               className={`w-full h-full `}
               alt="RaheekIraq"
               width={2000}
