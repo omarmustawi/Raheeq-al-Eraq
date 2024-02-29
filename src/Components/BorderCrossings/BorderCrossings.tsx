@@ -48,7 +48,7 @@ export default function BorderCrossings() {
       </section>
       {/* left section */}
       <section ref={ref} className={`animated-left-hidden ${inView && "animated-come"}`}>
-        <Image src={mapIraq} alt="" width={400} height={400} />
+        <Image className="w-auto h-auto" src={mapIraq} alt="raheek-iraq" width={400} height={400} />
       </section>
     </section>
   );

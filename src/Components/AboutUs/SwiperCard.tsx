@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 // }
 
 interface SwiperCardProps {
-  imgs: string[];
+  imgs: HTMLImageElement[];
 }
 
 export default function SwiperCard({
@@ -33,7 +33,7 @@ export default function SwiperCard({
           // eslint-disable-next-line react/jsx-key
           <SwiperSlide key={index}>
             <Image
-              src={item}
+              src={item.src}
               // className={`${item.style} `}
               className={`w-full h-full `}
               alt="RaheekIraq"

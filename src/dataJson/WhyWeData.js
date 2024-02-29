@@ -1,7 +1,6 @@
-import icon1 from "@/Images/AboutUs/icon1.png";
-import icon2 from "@/Images/AboutUs/icon2.png";
-import icon3 from "@/Images/AboutUs/icon3.svg";
-
+import icon1 from "/public/AboutUs/icon1.png"
+import icon2 from "/public/AboutUs/icon2.png"
+import icon3 from "/public/AboutUs/icon3.svg"
 export const features = [
   {
     icon: icon1,

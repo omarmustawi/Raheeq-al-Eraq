@@ -10,7 +10,7 @@ export default function WhyWe() {
     <section className={`container-mx`}>
       <h4 className="titleSection "> لماذا رحيق العراق ؟ </h4>
       <div
-            ref={ref}
+        ref={ref}
         className={`flex flex-wrap lg:flex-nowrap justify-center items-center mx-5 gap-7 my-20 lg:my-40`}
       >
         {features.map(

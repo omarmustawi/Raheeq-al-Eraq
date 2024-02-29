@@ -1,11 +1,14 @@
-import React from "react";
 import { aboutUsImg, data } from "@/dataJson/DataAboutUs";
 import WhyWe from "./WhyWe";
 import SwiperCard from "./SwiperCard";
+import PreloadImages from "@/PreloadImages/PreloadImages";
+import { useState } from "react";
 
 export default function AboutUs() {
+  const [preloadedImages, setPreloadedImages] = useState<HTMLImageElement[]>([]);
   return (
     <>
+      <PreloadImages images={aboutUsImg} onImagesLoaded={setPreloadedImages} />
       <section
         id={"#about-us"}
         className="w-screen flex flex-col lg:flex-row about-flex-row-for-min-900 justify-between items-center gap-9 py-10 px-7 md:px-10 lg:px-20  overflow-hidden"
@@ -19,7 +22,7 @@ export default function AboutUs() {
         {/* left section */}
         <section className="w-[calc(300px)] h-[calc(400px)] my-0 ">
           <div className="relative m-auto flex items-center  w-full h-full">
-            <SwiperCard imgs={aboutUsImg} />
+            <SwiperCard imgs={preloadedImages} />
           </div>
         </section>
       </section>

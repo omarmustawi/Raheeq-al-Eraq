@@ -12,7 +12,6 @@ import SmallScreenNavbar from "@/Components/Navbar/SmallScreenNavbar";
 import { useEffect, useState } from "react";
 import LoaderSpinner from "@/Components/LoaderSpinner/LoaderSpinner";
 import { NextSeo } from "next-seo";
-import PreloadImages from "@/PreloadImages/PreloadImages";
 
 export default function Home() {
   const { width } = useWindowSize();
@@ -26,19 +25,13 @@ export default function Home() {
   // if (loading) {
   //   return <LoaderSpinner />;
   // }
-  const images = [
-    "/img1.webp",
-    "/img2.webp",
-    "/img3.webp",
-    "/img4.webp",
-  ];  
+  
   return (
     <>
       {loading ? (
         <LoaderSpinner /> 
         ) : (
           <>
-          <LoaderSpinner /> 
           <NextSeo
             title="شركة رحيق العراق الذهبية للنقل والتخليص الجمركي"
             description="تعمل الشركة على تفادي المخاطر وعدم الوقوع تحت طائلة الغرامات. تقوم الشركة بكافة الأمور اللازمة في التخليص الجمركي للاستيراد. نقوم بعمل تخليص جمركي لكافة أنواع البضائع سواء البسيطة أو القيمة."
@@ -61,7 +54,6 @@ export default function Home() {
           />
           <main>
             {width > 1160 ? <LargeScreenNavbar /> : <SmallScreenNavbar />}
-            <PreloadImages images={images} />
             <HomePage />
             <AboutUs />
             <OurAims />

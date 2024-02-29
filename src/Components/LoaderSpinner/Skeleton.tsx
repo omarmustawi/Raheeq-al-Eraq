@@ -1,9 +1,9 @@
 import React from "react";
 import { ThreeDots } from "react-loader-spinner";
 
-export default function Skeleton({}) {
+export default function Skeleton({ style }: { style: string }) {
   return (
-    <div className="img-team15 w-full h-full rounded-full">
+    <div className={`w-full h-full relative z-20 rounded-full ${style}`}>
       <div className="flex flex-row justify-center items-center rounded-3xl w-full h-full">
         <div
           dir="ltr"

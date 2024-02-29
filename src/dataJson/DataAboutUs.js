@@ -1,17 +1,26 @@
-import aboutUsImg1 from "@/Images/AboutUs/aboutUs1.svg";
-import aboutUsImg2 from "@/Images/AboutUs/aboutUs2.jpg";
-import aboutUsImg3 from "@/Images/AboutUs/aboutUs3.jpg";
-import aboutUsImg4 from "@/Images/AboutUs/aboutUs4.jpg";
-import aboutUsImg5 from "@/Images/AboutUs/aboutUs5.jpg";
-import aboutUsImg6 from "@/Images/AboutUs/aboutUs6.jpg";
+// import aboutUsImg1 from "@/Images/AboutUs/aboutUs1.svg";
+// import aboutUsImg2 from "@/Images/AboutUs/aboutUs2.jpg";
+// import aboutUsImg3 from "@/Images/AboutUs/aboutUs3.jpg";
+// import aboutUsImg4 from "@/Images/AboutUs/aboutUs4.jpg";
+// import aboutUsImg5 from "@/Images/AboutUs/aboutUs5.jpg";
+// import aboutUsImg6 from "@/Images/AboutUs/aboutUs6.jpg";
+
+// const aboutUsImg = [
+//   aboutUsImg1,
+//   aboutUsImg2,
+//   aboutUsImg3,
+//   aboutUsImg4,
+//   aboutUsImg5,
+//   aboutUsImg6
+// ];
 
 const aboutUsImg = [
-  aboutUsImg1,
-  aboutUsImg2,
-  aboutUsImg3,
-  aboutUsImg4,
-  aboutUsImg5,
-  aboutUsImg6
+  "/AboutUs/aboutUs1.svg",
+  "/AboutUs/aboutUs2.jpg",
+  "/AboutUs/aboutUs3.jpg",
+  "/AboutUs/aboutUs4.jpg",
+  "/AboutUs/aboutUs5.jpg",
+  "/AboutUs/aboutUs6.jpg",
 ];
 
 const data = {
