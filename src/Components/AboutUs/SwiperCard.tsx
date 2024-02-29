@@ -33,7 +33,7 @@ export default function SwiperCard({
           // eslint-disable-next-line react/jsx-key
           <SwiperSlide key={index}>
             <Image
-              src={item.src}
+              src={item}
               // className={`${item.style} `}
               className={`w-full h-full `}
               alt="RaheekIraq"
