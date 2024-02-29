@@ -136,7 +136,7 @@ const HomePage = () => {
               className="w-ful"
               ref={carouselRef}
             >
-              {carouselItems.map((item, index) => (
+              {images.map((item, index) => (
                 <div className={`container-img`} key={index}>
                   <Image
                     className={`${
