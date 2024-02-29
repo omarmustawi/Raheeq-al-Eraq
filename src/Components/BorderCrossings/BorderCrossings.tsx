@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import icon1 from "@/Images/BorderCrossings/icon1.jpg";
-import icon2 from "@/Images/BorderCrossings/icon2.jpg";
-import icon3 from "@/Images/BorderCrossings/icon3.jpg";
-import mapIraq from "@/Images/BorderCrossings/mapIraq.jpg";
+import icon1 from "/public/BorderCrossings/icon1.jpg";
+import icon2 from "/public/BorderCrossings/icon2.jpg";
+import icon3 from "/public/BorderCrossings/icon3.jpg";
+import mapIraq from "/public/BorderCrossings/mapIraq.jpg";
 import { crossings } from "@/dataJson/DataBorderCrossings";
 import { useInView } from "react-intersection-observer";
 

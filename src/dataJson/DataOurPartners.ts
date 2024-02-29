@@ -2,7 +2,7 @@ const importImages = (startI: number, endI: number, logos: string[]) => {
   const imagesWithLogos = [];
   for (let i = startI; i <= endI; i++) {
     imagesWithLogos.push({
-      image: require(`@/Images/Partners/${i}.jpg`),
+      image: require(`/public/Partners/${i}.jpg`),
       companyName: logos[i - 1],
     });
   }

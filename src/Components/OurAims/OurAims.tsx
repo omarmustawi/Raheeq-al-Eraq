@@ -1,8 +1,8 @@
 import React from "react";
-import OurAims1 from "@/Images/OurAims/OurAims1.jpg";
-import OurAims2 from "@/Images/OurAims/OurAims2.jpg";
-import OurAims3 from "@/Images/OurAims/OurAims3.jpg";
-import OurAims4 from "@/Images/OurAims/OurAims4.jpg";
+import OurAims1 from "/public/OurAims/OurAims1.jpg";
+import OurAims2 from "/public/OurAims/OurAims2.jpg";
+import OurAims3 from "/public/OurAims/OurAims3.jpg";
+import OurAims4 from "/public/OurAims/OurAims4.jpg";
 import Image from "next/image";
 import { data } from "@/dataJson/DataOurAims";
 import { useInView } from "react-intersection-observer";
