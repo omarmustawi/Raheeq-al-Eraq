@@ -114,6 +114,7 @@ const HomePage = () => {
           width={6000}
           height={6000}
           priority={true}
+          placeholder="blur"
         />
         {isDisplayLine && (
           <div className="absolute top-0 left-0 h-1 scalingLine "></div>
@@ -144,6 +145,7 @@ const HomePage = () => {
                       "border-2 border-white  "
                     } rounded-md shadow-3xl w-full h-5/6 object-cover
                   `}
+                    placeholder="blur"
                     src={item}
                     alt={`Raheek-AL-Iraq-${index + 1}`}
                     width={3000}

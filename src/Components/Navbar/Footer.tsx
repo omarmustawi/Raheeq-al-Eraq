@@ -107,7 +107,9 @@ export default function Footer() {
                 )}
                 {/*Note Note : Here  You Have To Add link tick tok handly*/}
                 <Link
-                  href={"https://www.tiktok.com/@rahik.aliraq?_t=8k2co8oeXXa&_r=1"}  // add link tick tok here
+                  href={
+                    "https://www.tiktok.com/@rahik.aliraq?_t=8k2co8oeXXa&_r=1"
+                  } // add link tick tok here
                   className={`bg-[#FFFFFF]/50 relative  h-28 w-10 p-2 rounded-2xl flex 
                   animate-down-up 
                   `}
@@ -117,6 +119,7 @@ export default function Footer() {
                 >
                   <li className="relative h-full w-full p-1 rounded-2xl flex">
                     <Image
+                      placeholder="blur"
                       className=" absolute  bottom-2 right-1/2 translate-x-1/2 rounded-full w-[25px] h-[25px]"
                       width={40}
                       height={40}
@@ -159,7 +162,12 @@ export default function Footer() {
               {/* end Navigate links */}
 
               {/* start logo */}
-              <Image className="w-36 lg:w-28 xl:w-40 h-fit" src={logo} alt="Raheek-al-iraq-logo" />
+              <Image
+                placeholder="blur"
+                className="w-36 lg:w-28 xl:w-40 h-fit"
+                src={logo}
+                alt="Raheek-al-iraq-logo"
+              />
               {/* end logo */}
             </div>
           </section>

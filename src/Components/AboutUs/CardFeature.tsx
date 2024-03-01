@@ -26,6 +26,7 @@ export default function CardFeature({
         alt={"Raheek-Al-Iraq"}
         width={150}
         height={150}
+        placeholder="blur"
       />
       <h4 className="text-xl lg:text-4xl font-semibold"> {title} </h4>
       <p className="lg:text-xl">{paragraph}</p>

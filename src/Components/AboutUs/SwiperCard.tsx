@@ -32,6 +32,7 @@ export default function SwiperCard({
               alt="RaheekIraq"
               width={2000}
               height={2000}
+              placeholder="blur"
             />
           </SwiperSlide>
         ))}

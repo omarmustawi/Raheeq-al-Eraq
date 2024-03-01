@@ -25,7 +25,7 @@ export default function BorderCrossings() {
       >
         <div className="flex  flex-row md:flex-col gap-4 mx-10">
           {icons.map((img, index) => (
-            <Image key={index} src={img} alt="" width={70} height={70} />
+            <Image key={index} placeholder="blur" src={img} alt="" width={70} height={70} />
           ))}
         </div>
 
@@ -48,7 +48,7 @@ export default function BorderCrossings() {
       </section>
       {/* left section */}
       <section ref={ref} className={`animated-left-hidden ${inView && "animated-come"}`}>
-        <Image className="w-auto h-auto" src={mapIraq} alt="raheek-iraq" width={400} height={400} />
+        <Image className="w-auto h-auto" placeholder="blur" src={mapIraq} alt="raheek-iraq" width={400} height={400} />
       </section>
     </section>
   );

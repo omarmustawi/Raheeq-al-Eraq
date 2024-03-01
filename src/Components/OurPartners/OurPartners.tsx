@@ -14,7 +14,7 @@ export default function OurPartners() {
             key={index}
             className="relative group"
           >
-            <Image className="w-36 h-36" src={item.image} alt="" width={100} height={100} />
+            <Image placeholder="blur" className="w-36 h-36" src={item.image} alt="" width={100} height={100} />
             <p className="group-hover:block hidden shadow-lg absolute -top-10 left-1/2 -translate-x-1/2 text-gray-600 bg-slate-100 w-fit p-3 z-10 rounded-xl">
               {companiesLogo1[index]}
             </p>
@@ -28,7 +28,7 @@ export default function OurPartners() {
             key={index}
             className="relative group"
           >
-            <Image className="w-36 h-36 "src={item.image} alt="" width={100} height={100} />
+            <Image placeholder="blur" className="w-36 h-36 "src={item.image} alt="" width={100} height={100} />
             <p className="group-hover:block hidden shadow-lg absolute -top-10 left-1/2 -translate-x-1/2 text-gray-600 bg-slate-100 w-fit p-3 z-10 rounded-xl">
               {companiesLogo2[index]}
             </p>
