@@ -23,13 +23,14 @@ export default function Team() {
     >
       {/* section right */}
       <div className="h-fit grid-repeat justify-center items-center">
-      <Suspense fallback={<Skeleton style={"img-current"} />}>
+      {/* <Suspense fallback={<Skeleton style={"img-current"} />}> */}
         <Image
           src={images[currentImageIndex].src}
           alt="raheek-iraq-team"
+          placeholder="blur"
           className="rounded-full border-4 border-yel img-current w-full h-full "
         />
-        </Suspense>
+        {/* </Suspense> */}
         {images.map((img, index) => (
           <Suspense key={index} fallback={<Skeleton style={img.style} />}>
             <Image
