@@ -21,11 +21,21 @@ export default function BorderCrossings() {
       {/* right section  */}
       <section
         ref={ref}
-        className={`flex flex-col md:flex-row items-center gap-4 animated-right-hidden ${inView && "animated-come"} `}
+        className={`flex flex-col md:flex-row items-center gap-4 animated-right-hidden ${
+          inView && "animated-come"
+        } `}
       >
         <div className="flex  flex-row md:flex-col gap-4 mx-10">
           {icons.map((img, index) => (
-            <Image key={index} placeholder="blur" src={img} alt="" width={70} height={70} />
+            <Image
+              key={index}
+              placeholder="blur"
+              blurDataURL="/public/logo.png"
+              src={img}
+              alt=""
+              width={70}
+              height={70}
+            />
           ))}
         </div>
 
@@ -47,8 +57,19 @@ export default function BorderCrossings() {
         </div>
       </section>
       {/* left section */}
-      <section ref={ref} className={`animated-left-hidden ${inView && "animated-come"}`}>
-        <Image className="w-auto h-auto" placeholder="blur" src={mapIraq} alt="raheek-iraq" width={400} height={400} />
+      <section
+        ref={ref}
+        className={`animated-left-hidden ${inView && "animated-come"}`}
+      >
+        <Image
+          className="w-auto h-auto"
+          placeholder="blur"
+          blurDataURL="/public/logo.png"
+          src={mapIraq}
+          alt="raheek-iraq"
+          width={400}
+          height={400}
+        />
       </section>
     </section>
   );

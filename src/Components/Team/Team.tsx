@@ -26,12 +26,14 @@ export default function Team() {
           src={images[currentImageIndex].src}
           alt="raheek-iraq-team"
           placeholder="blur"
+          blurDataURL="/public/logo.png"
           className="rounded-full border-4 border-yel img-current w-full h-full "
         />
         {images.map((img, index) => (
           <Image
             key={index}
             placeholder="blur"
+            blurDataURL="/public/logo.png"
             className={`rounded-full w-full h-full ${img.style}`}
             src={img.src}
             alt={`raheek-iraq-team-${index}`}

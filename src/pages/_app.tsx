@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>شركة رحيق العراق</title>
+        <link rel="preload" href={'/public/logo.png'} as="image" />
         <link rel="icon" href="/logo.ico" />
         <link rel="icon" type="image/ico" sizes="32x32" href="/logo.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/logo.ico" />{" "}

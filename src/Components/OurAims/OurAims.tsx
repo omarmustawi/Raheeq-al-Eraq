@@ -55,6 +55,7 @@ export default function OurAims() {
           {imgs.map((img, index) => (
             <Image
               placeholder="blur"
+              blurDataURL="/public/logo.png"
               className={`${index % 2 ? "animate-up-down" : "animate-down-up"} 
               w-14 sm:w-28
               `}

@@ -120,6 +120,7 @@ export default function Footer() {
                   <li className="relative h-full w-full p-1 rounded-2xl flex">
                     <Image
                       placeholder="blur"
+                      blurDataURL="/public/logo.png"
                       className=" absolute  bottom-2 right-1/2 translate-x-1/2 rounded-full w-[25px] h-[25px]"
                       width={40}
                       height={40}
@@ -164,6 +165,7 @@ export default function Footer() {
               {/* start logo */}
               <Image
                 placeholder="blur"
+                blurDataURL="/public/logo.png"
                 className="w-36 lg:w-28 xl:w-40 h-fit"
                 src={logo}
                 alt="Raheek-al-iraq-logo"

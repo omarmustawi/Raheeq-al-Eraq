@@ -1,14 +1,17 @@
 "use client";
+import img1 from "/public/img1.webp";
+import img2 from "/public/img2.webp";
+import img3 from "/public/img3.webp";
+import img4 from "/public/img4.webp";
 import Image from "next/image";
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProgressMobileStepper from "./ProgressMobileStepper";
 import useCarouselLogic from "@/Hooks/useCarouselLogic";
 import Link from "next/link";
 import { scrollToSection } from "@/Functions/functions";
-import PreloadImages from "@/PreloadImages/PreloadImages";
 
 const HomePage = () => {
   const styleImage = [
@@ -19,12 +22,9 @@ const HomePage = () => {
     "background-position",
     "background-position",
   ];
-  const images = ["/img1.webp", "/img2.webp", "/img3.webp", "/img4.webp"];
-
-  const [carouselItems, setCarouselItems] = useState<HTMLImageElement[]>([]);
-
+  const carouselItems = [img1, img2, img3, img4];
   const { backgroundImage, isDisplayLine, updateBackgroundImage } =
-    useCarouselLogic(images);
+    useCarouselLogic(img1, carouselItems);
 
   const carouselRef = useRef<Carousel>(null);
 
@@ -37,14 +37,14 @@ const HomePage = () => {
 
   const nextImage = () => {
     const nextIndex =
-      (images.indexOf(backgroundImage) + 1) % carouselItems.length;
+      (carouselItems.indexOf(backgroundImage) + 1) % carouselItems.length;
     updateBackgroundImage(nextIndex);
   };
 
   const previousImage = () => {
     const previousIndex =
       (carouselItems.indexOf(backgroundImage) - 1 + carouselItems.length) %
-      images.length;
+      carouselItems.length;
     updateBackgroundImage(previousIndex);
   };
 
@@ -66,7 +66,6 @@ const HomePage = () => {
 
   return (
     <>
-      <PreloadImages images={images} onImagesLoaded={setCarouselItems} />
       <div
         style={{ textShadow: "2px 2px  9px black" }}
         className="font-El-Messiri  absolute bottom-[calc(100%-300px)] lg:bottom-32  left-1/2 -translate-x-1/2 lg:left-10 xl:left-[calc((100%-1100px)/2)] xl:w-[calc(100%-700px)]  lg:translate-x-0 z-10  text-white w-[calc(90%)] sm:w-[calc(453px)] lg:w-[calc(100%-700px)] max-w-[calc(400px)] "
@@ -113,8 +112,7 @@ const HomePage = () => {
           className="absolute bg-cover top-0 left-0 right-0 bottom-0 w-full h-full"
           width={6000}
           height={6000}
-          priority={true}
-          placeholder="blur"
+          // priority={true}
         />
         {isDisplayLine && (
           <div className="absolute top-0 left-0 h-1 scalingLine "></div>
@@ -137,7 +135,7 @@ const HomePage = () => {
               className="w-ful"
               ref={carouselRef}
             >
-              {images.map((item, index) => (
+              {carouselItems.map((item, index) => (
                 <div className={`container-img`} key={index}>
                   <Image
                     className={`${
@@ -145,8 +143,7 @@ const HomePage = () => {
                       "border-2 border-white  "
                     } rounded-md shadow-3xl w-full h-5/6 object-cover
                   `}
-                    placeholder="blur"
-                    src={item}
+                    src={item.src}
                     alt={`Raheek-AL-Iraq-${index + 1}`}
                     width={3000}
                     height={5000}
@@ -181,11 +178,11 @@ const HomePage = () => {
 
             <div className=" min-w-[calc((100%)-150px)]  md:min-w-[calc((100%)-86px-150px)] w-max relative ">
               <ProgressMobileStepper
-                activeStep={images.indexOf(backgroundImage)}
+                activeStep={carouselItems.indexOf(backgroundImage)}
               />
             </div>
             <div className="text-white text-4xl text-center lg:text-6xl  opacity-60 h-fit flex  justify-center">
-              0{images.indexOf(backgroundImage) + 1}
+              0{carouselItems.indexOf(backgroundImage) + 1}
             </div>
           </div>
         </div>

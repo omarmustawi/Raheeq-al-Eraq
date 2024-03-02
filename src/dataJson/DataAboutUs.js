@@ -16,7 +16,6 @@
 
 const aboutUsImg = [
   "/AboutUs/aboutUs1.svg",
-  "/AboutUs/aboutUs2.jpg",
   "/AboutUs/aboutUs3.jpg",
   "/AboutUs/aboutUs4.jpg",
   "/AboutUs/aboutUs5.jpg",

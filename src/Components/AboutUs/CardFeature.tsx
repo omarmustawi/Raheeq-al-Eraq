@@ -27,6 +27,7 @@ export default function CardFeature({
         width={150}
         height={150}
         placeholder="blur"
+        blurDataURL="/public/logo.png"
       />
       <h4 className="text-xl lg:text-4xl font-semibold"> {title} </h4>
       <p className="lg:text-xl">{paragraph}</p>
